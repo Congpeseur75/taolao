@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>hocvien</title>
+    <style>
+        span{
+            color: blue;
+            display: inline-block;
+            width: 80px;
+        }
+        h2{
+            background-color: aquamarine;
+            color: blue;
+        }
+        #container{
+            background-color: yellow;
+        }
+        button{
+            display: inline-block;
+            width: 80px;
+        }
+    </style>
 </head>
-<body>
-$END$
+<body id="container">
+<form action="hocvien.html" method="get">
+    <h2>ĐĂNG KÝ HỌC VIÊN</h2>
+    <span>Họ và tên</span> <input type="text" name="p"><br>
+    <br>
+    <span>Ngày sinh</span> <input type="date" name="birth"><br>
+    <br>
+    <span>Giới tính</span>
+    <label> <input name="a" value="Nam" type="radio">Nam</label>
+    <label> <input name="a" value="Nữ" type="radio">Nữ</label><br>
+    <br>
+    <span style="vertical-align: top">Địa chỉ</span> <textarea rows="5" cols="25"> </textarea><br>
+    <br>
+    <span>Lớp</span>
+    <select>
+        <option>-Chọn Lớp-</option>
+    </select><br>
+    <br>
+    <span>Email</span> <input type="email"><br>
+    <br>
+    <span>Điện thoại</span> <input type="number"><br>
+    <br>
+    <button type="register">register</button>
+    <button type="reset">reset</button>
+
+</form>
+
 </body>
 </html>
