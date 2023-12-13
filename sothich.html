@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>sothich</title>
+    <style>
+        span{
+            color: blue;
+        }
+        #container {
+            background-color: cornflowerblue;
+            width: 600px;
+        }
+        #formsothich{
+            background-color: white;
+            width: 500px;
+        }
+        h2{
+            margin: 5px;
+        }
+        label{
+            color: coral;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div id="container" align="center">
+<form id="formsothich" action="http://sothich.com" method="get">
+    <h2 style=" color:white; background-color: red" >SỞ THÍCH CỦA BẠN</h2>
+    <span>Họ và tên:</span> <input name="p"><br>
+  <br>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:</span> <input type="email" name="email"><br>
+  <br>
+   sở thích: <label> <input name="hobby" value="thể thao" type="checkbox"> thể thao</label>
+              <label> <input name="hobby" value="âm nhạc" type="checkbox"> âm nhạc</label>
+              <label> <input name="hobby" value="đọc sách" type="checkbox"> đọc sách</label><br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label> <input name="hobby" value="lướt web" type="checkbox"> lướt web</label>
+             <label> <input name="hobby" value="chơi game" type="checkbox"> chơi game</label>
+             <label> <input name="hobby" value="điện ảnh" type="checkbox"> điện ảnh</label><br>
+    <br>
+             <label> <input name="hobby" value="du lịch" type="checkbox"> du lịch</label><br>
+    <br>
+    <button type="submit">submit</button>
+    <button type="reset">reset</button>
+</form>
+</div>
 </body>
 </html>
