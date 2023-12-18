@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>máy tính cầm tay</title>
+</head>
+<body>
+<input id="number1" placeholder="nhập số 1">
+<input id="number2" placeholder="nhập số 2">
+<button onclick="sum()">+</button>
+<button onclick="tru()">-</button>
+<button onclick="nhan()">*</button>
+<button onclick="chia()">/</button>
+</body>
+</html>
+<script>
+    function sum() {
+      let inputNumber1 = document.getElementById("number1");
+      let inputNumber2 = document.getElementById("number2");
+      let number1 = parseInt(inputNumber1.value);
+      let number2 = parseInt(inputNumber2.value);
+        alert(number1 + number2);
+    }
+    function tru() {
+        let inputNumber1 = document.getElementById("number1");
+        let inputNumber2 = document.getElementById("number2");
+        let number1 = parseInt(inputNumber1.value);
+        let number2 = parseInt(inputNumber2.value);
+        alert(number1 - number2);
+    }
+    function nhan() {
+        let inputNumber1 = document.getElementById("number1");
+        let inputNumber2 = document.getElementById("number2");
+        let number1 = parseInt(inputNumber1.value);
+        let number2 = parseInt(inputNumber2.value);
+        alert(number1 * number2);
+    }
+    function chia() {
+        let inputNumber1 = document.getElementById("number1");
+        let inputNumber2 = document.getElementById("number2");
+        let number1 = parseInt(inputNumber1.value);
+        let number2 = parseInt(inputNumber2.value);
+        alert(number1 / number2);
+    }
+</script>
