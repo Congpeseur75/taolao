@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyendoitiente</title>
+</head>
+<body>
+<h2>Amount</h2>
+<input type="textarea" name="textarea" placeholder="nhập số" id="Amount">
+<h2>From Currency</h2>
+<select id="From">
+    <option value="VND">Vietnam</option>
+    <option value="USD">USA</option>
+    <option value="EURO">Euro</option>
+</select>
+<h2>To Currency</h2>
+<select id="To">
+    <option value="VND">VND</option>
+    <option  value="USD">USD</option>
+    <option value= "EURO">EURO</option>
+</select><br/><br/>
+<button onclick="ChangeMoney()">Convert</button>
+</body>
+</html>
+<script>
+    function ChangeMoney() {
+        let Amount = document.getElementById("Amount").value;
+        let FromC = document.getElementById("From").value;
+        let To = document.getElementById("To").value;
+        let Result;
+
+
+        if (FromC == "USD" && To == "VND") {
+            Result = "Result: " + (Amount * 23000) + " Đ";
+        }
+        else if (FromC == "VND"&& To =="USD"){
+            Result = "Result: "+ (Amount / 23000) + " $";
+        }
+        else if (FromC == "VND") {
+            Result = "Result: " + Amount + " Đ"
+        } else {
+            Result = "Result: " + Amount + " $"
+        }
+        document.getElementById("Result").innerHTML = Result;
+    }
+</script>
