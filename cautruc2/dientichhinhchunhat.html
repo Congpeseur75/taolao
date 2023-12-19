@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dientichchunhat</title>
+</head>
+<body>
+<input id="canha" name="chunhat">
+<input id="canhb" name="chunhat">
+<button onclick="check()">submit</button>
+</body>
+</html>
+<script>
+    function check(){
+        let chieudai = document.getElementById('canha').value
+        let chieurong = document.getElementById('canhb').value
+        let dientich = (chieudai * chieurong);
+            alert(dientich)
+    }
+</script>
