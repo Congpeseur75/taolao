@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<h1>LOGIN</h1>
+     tài khoản:<br>
+    <input id="taikhoan" type="text" name="tài khoản" ><br>
+     mật khẩu:<br>
+    <input id="matkhau" type="text" name="mat khau">
+    <br>
+    xác nhận mat khau:<br>
+    <input id="xacnhan" type="text" name="xac nhan">
+    <br>
+    <button onclick="check()">login</button>
+</body>
+</html>
+<script>
+    function check(){
+        let taikhoan = document.getElementById('taikhoan').value
+        let matkhau = document.getElementById('matkhau').value
+        let xacnhanmatkhau = document.getElementById('xacnhan').value
+        if (taikhoan == Admin || matkhau == Admin){
+            if (xacnhanmatkhau==TheMaster){
+            alert('Welcome')
+            }else if (xacnhanmatkhau == null) {
+                alert('Canceled')
+                    }else {
+                    alert('Wrong password');
+            }
+        }else if (taikhoan==null){
+            alert('Canceled')
+        }else {
+            alert('I don’t know you')
+        }
+
+    }
+</script>
