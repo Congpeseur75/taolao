@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xephang</title>
+</head>
+<body>
+<input id="number1" placeholder="diem kiem tra">
+<input id="number2" placeholder="diem giua ky">
+<input id="number3" placeholder="diem cuoi ky">
+<button onclick="tong()">submit</button>
+</body>
+</html>
+<script>
+    function tong(){
+        let a = document.getElementById('number1').value
+        let b = document.getElementById('number2').value
+        let c = document.getElementById('number3').value
+        let sum = (a+b+c)/3
+        if (sum>=8){
+            alert('loại giỏi')
+        }else if (sum>=7 && sum<8){
+            alert('loại khá')
+        }else if (sum>=5 && sum<7){
+            alert('loại trung bình')
+        }else {
+            alert('loại yếu')
+        }
+
+    }
+</script>

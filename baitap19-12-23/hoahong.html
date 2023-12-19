@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doanhsohoahong</title>
+</head>
+<body>
+    <h3>Doanh số hoa hồng</h3>
+    <label for="number1">doanhsobanhang</label>
+    <input id="number1"  type="text">
+    <button onclick="tinhdoanhso()">submit</button>
+</body>
+</html>
+<script>
+    function tinhdoanhso(){
+    let doanhso = document.getElementById('number1').value
+        if (doanhso===1000 || doanhso <=0){
+            alert('doanhso')
+        }else {
+            alert('doanhsoam')
+        }
+    }
+    let hoahong = 0
+       if (doanh<=500){
+        alert(hoahong = doanhso * 0.05);//5%hoa hong cho ng duoi 1000
+       }else if (doanhso>500 && doanhso<2000){
+        alert(hoahong = doanhso * 0.1);//10%hoa hong cho ng tren 1000
+       }else {
+           alert(hoahong = doanhso * 0.15);//15%hoa hong cho nguoi tren 2000
+       }
+    document.getElementById("result").innerHTML = "Hoa hồng nhận được là: " + hoaHong.toFixed(2) + " đồng";
+
+</script>

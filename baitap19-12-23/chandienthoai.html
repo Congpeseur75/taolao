@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chandienthoai</title>
+</head>
+<body>
+<h3>Chan dien thoai</h3>
+<input id="sophut" placeholder="so phut goi">
+<input id="sotinnhan" placeholder="so tin nhan">
+<button onclick="check()">submit</button>
+</body>
+</html>
+<script>
+    function check(){
+        let goi = document.getElementById('sophut').value
+        let tinnhan = document.getElementById('sotinnhan').value
+        let chiphigoi = (goi * 200);// so phut gọi bằng 200đ/phut
+        let chiphitinnhan = (tinnhan * 100);//số tin nhắn bằng 100đ/phút
+        let tong = (chiphigoi + chiphitinnhan);
+            alert(tong)
+    }
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tuoihocsinh</title>
+</head>
+<body>
+<input id="number1" placeholder="nhap do tuoi">
+<button onclick="year">submit</button>
+</body>
+</html>
+<script>
+  function year(){
+    let tuoi = document.getElementById('number1').value
+    if (tuoi <= 15){
+      alert('khong phai lop 10')
+    }
+    else {
+      alert('la lop 10')
+    }
+  }
+</script>

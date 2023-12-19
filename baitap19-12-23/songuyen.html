@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>songuyen</title>
+</head>
+<body>
+<input id="number1" placeholder="nhap so">
+<button onclick="sum()">submit</button>
+</body>
+</html>
+<script>
+    function sum(){
+        let so = document.getElementById('number1')
+        if (so>0){
+            alert('so lon hon 0')
+        }else if (so<0){
+            alert('so nho hon 0')
+        }else {
+            alert('so 0')
+        }
+    }
+</script>

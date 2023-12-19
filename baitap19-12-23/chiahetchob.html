@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chiahetchob</title>
+</head>
+<body>
+<input id="number1" placeholder="nhap a">
+<input id="number2" placeholder="nhap b">
+<button onclick="sum()">submit</button>
+</body>
+</html>
+<script>
+    function sum() {
+        let a = document.getElementById('number1').value
+        let b = document.getElementById('number2').value
+        if (a%b==0){
+            alert('a chia cho b');
+        }else {
+            alert('a khong chia het cho b');
+        }
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giatrilonnhat</title>
+</head>
+<body>
+<input id="number1" placeholder="nhap so">
+<input id="number2" placeholder="nhap so">
+<input id="number3" placeholder="nhap so">
+<button onclick="tong()">submit</button>
+</body>
+</html>
+<script>
+    function tong(){
+        let a = document.getElementById('number1').value
+        let b = document.getElementById('number2').value
+        let c = document.getElementById('number3').value
+        if (a>b && b>c){
+            alert('a la lon nhat');
+        }else if (b>a && c>a){
+            alert('b la lon nhat');
+        }else {
+            alert('c la lon nhat');
+        }
+    }
+</script>
