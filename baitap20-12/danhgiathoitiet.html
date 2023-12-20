@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>danhgiathoitiet</title>
+</head>
+<body>
+<input id="nhietdo" placeholder="nhap nhiet do">
+<button onclick="thoitiet()">check</button>
+</body>
+</html>
+<script>
+    function thoitiet(){
+        let nhietdo = document.getElementById('nhietdo').value
+            if (nhietdo<19){
+                alert('thoi tiet lanh')
+            }else if (19<nhietdo<=27){
+                alert('thoi tiet mat')
+            }else {
+                alert('thoi tiet nong')
+            }
+    }
+</script>

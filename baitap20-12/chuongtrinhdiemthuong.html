@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuongtrinhdiemthuong</title>
+</head>
+<body>
+<input id="sotien" placeholder="nhap so tien">
+<button onclick="check()">submit</button>
+</body>
+</html>
+<script>
+    let diemthuong = 0
+    function check(){
+        let sotien = document.getElementById('sotien').value
+            if (sotien<=100){
+                diemthuong = sotien * 0.1;
+                alert(diemthuong);
+            }else if (100<sotien<=500){
+                diemthuong = 100 * 0.1 + (sotien - 100) * 0.2;
+                alert(diemthuong)
+            }else {
+                diemthuong = 100 * 0.1 + 400 * 0.2 + (sotien-500) * 0.3
+                alert(diemthuong)
+            }
+    }
+</script>

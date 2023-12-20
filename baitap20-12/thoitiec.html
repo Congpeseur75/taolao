@@ -5,6 +5,21 @@
     <title>thoitiec</title>
 </head>
 <body>
-
+<input id="sothang" placeholder="nhap so thang">
+<button onclick="kiemtra()">kiemtra</button>
 </body>
 </html>
+<script>
+    function kiemtra(){
+        let thang = document.getElementById('sothang').value
+            if (thang==1 && thang==2 && thang==3 && thang==4){
+                alert('mua xuan');
+            }else if (thang==5 && thang==6 && thang==7){
+                alert('mua ha');
+            }else if (thang==8 && thang==9 && thang==10){
+                alert('mua thu');
+            }else {
+                alert('mua dong');
+            }
+    }
+</script>
