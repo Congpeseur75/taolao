@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhapdotuoi</title>
+</head>
+<body>
+<input id="dotuoi" placeholder="nhap so tuoi">
+<button onclick="dotuoi()">kiemtra</button>
+</body>
+</html>
+<script>
+    function dotuoi(){
+        let sotuoi = document.getElementById('dotuoi').value
+        if (sotuoi<0){
+            alert('so tuoi khong hop le');
+        }else if (sotuoi<=10){
+            alert('tre em');
+        }else if (sotuoi<=23){
+            alert('thieu nien');
+        }else if (sotuoi<=35){
+            alert('truong thanh');
+        }else if (sotuoi<=60){
+            alert('trung nien')
+        }else if (sotuoi<85){
+            alert('nguoi cao tuoi')
+        }else {
+            alert('nguoi gần đất xa trời')
+        }
+    }
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Món Ăn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+<h2>Chương trình Chọn Món Ăn</h2>
+<label for="foodMenu">Chọn món ăn: </label>
+<select id="foodMenu">
+    <option value="chay">Chay - 15.000 VNĐ</option>
+    <option value="ocean">Hải sản - 35.000 VNĐ</option>
+    <option value="meat">Thịt - 45.000 VNĐ</option>
+</select>
+<br>
+<label for="quantity">Nhập số lượng: </label>
+<input type="number" id="quantity" min="1">
+<br>
+<button onclick="calculateOrder()">Tính Giá</button>
+<p id="result"></p>
+
+<script>
+    function calculateOrder() {
+        var foodMenu = document.getElementById("foodMenu");
+        var quantity = document.getElementById("quantity").value;
+        var resultElement = document.getElementById("result");
+
+        // Kiểm tra xem số lượng nhập vào có hợp lệ không
+        if (quantity >= 1) {
+            // Lấy thông tin món ăn và giá từ danh sách
+            var selectedFood = foodMenu.options[foodMenu.selectedIndex].text;
+            var price = parseFloat(selectedFood.split("-")[1]);
+
+            // Tính tổng giá trị đơn hàng
+            var total = price * quantity;
+
+            resultElement.innerHTML = "Bạn đã chọn: " + selectedFood.trim() + "<br>";
+            resultElement.innerHTML += "Số lượng: " + quantity + "<br>";
+            resultElement.innerHTML += "Tổng giá trị đơn hàng:" + total.toFixed(3) + "VNĐ";
+        } else {
+            resultElement.innerHTML = "Vui lòng nhập số lượng hợp lệ (ít nhất là 1).";
+        }
+    }
+</script>
+</body>
+</html>>
+
+

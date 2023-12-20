@@ -12,8 +12,13 @@
 <script>
     function check(){
         let canh = document.getElementById('canh').value
-        let canhso = canh
-        let dientichhinhvuong = (canh * canhso);
+        if (canh>0){
+            let dientichhinhvuong = canh * canh;
             alert(dientichhinhvuong)
+        }else if (canh==0){
+            alert('không phải hình vuông')
+        }else {
+            alert('cạnh không hợp lệ')
+        }
     }
 </script>

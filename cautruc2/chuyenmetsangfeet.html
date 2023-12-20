@@ -1,0 +1,28 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>metsangfett</title>
+</head>
+<body>
+<input id="met" placeholder="nhập nhiệt độ">
+<button onclick="metsangfeet()">submit</button>
+</body>
+</html>
+<script>
+    function metsangfeet(){
+        let met = document.getElementById('met').value
+        if (met>0){
+            let feet = (doC*9/5) + 32;
+            alert(doF)
+        }else if (doC==0){
+            let doF = (doC*9/5)+32;
+            alert(doF)
+        }else if (doC<0){
+            let doF = (doC*9/5)+32;
+            alert(doF)
+        }else {
+            alert('khong co truong hop khac')
+        }
+    }
+</script>

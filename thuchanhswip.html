@@ -5,18 +5,23 @@
     <title>thuchanh</title>
 </head>
 <body>
-<script>
-    let value = prompt('type a number', o);
-    switch (true){
-        case (value>0):
-            alert(1)
-            break;
-        case (value<0):
-            alert(-1)
-            break;
-        default:
-            alert(0)
-    }
-</script>
+<input id="number1" name="text">
+<button onclick="check()">submit</button>
 </body>
 </html>
+<script>
+    function check(){
+        let a = parseInt(document.getElementById)('number1').value
+        let value = prompt('type a number', o);
+        switch (true){
+            case (value>0):
+                alert(1)
+            break;
+            case (value<0):
+                alert(-1)
+            break;
+            default:
+                alert(0)
+        }
+    }
+</script>

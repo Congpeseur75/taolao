@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhietdo" placeholder="nhập nhiệt độ">
+<button onclick="docsangdof()">submit</button>
+</body>
+</html>
+<script>
+    function docsangdof(){
+        let doC = document.getElementById('nhietdo').value
+        if (doC>0){
+            let doF = (doC*9/5) + 32;
+            alert(doF)
+        }else if (doC==0){
+            let doF = (doC*9/5)+32;
+            alert(doF)
+        }else if (doC<0){
+            let doF = (doC*9/5)+32;
+            alert(doF)
+        }else {
+            alert('khong co truong hop khac')
+        }
+    }
+</script>

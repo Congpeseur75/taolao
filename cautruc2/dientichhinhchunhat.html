@@ -14,7 +14,15 @@
     function check(){
         let chieudai = document.getElementById('canha').value
         let chieurong = document.getElementById('canhb').value
-        let dientich = (chieudai * chieurong);
-            alert(dientich)
+        if (chieudai>0 && chieurong>0){
+            let dtchunhat = chieudai * chieurong;
+            alert(dtchunhat)
+        }else if ((chieudai>0 && chieurong==0)||(chieurong>0 && chieudai==0)){
+            alert('khong phai dien tich hinh chu nhat')
+        }else if ((chieudai>0 && chieurong<0)||(chieurong>0 && chieudai<0)){
+            alert('canh khong hop le')
+        }else {
+            alert('canh khong hop le')
+        }
     }
 </script>

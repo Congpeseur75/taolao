@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhgiaxemphim</title>
+</head>
+<body>
+<input id="age" placeholder="nhap do tuoi">
+<button onclick="banve()">xuat</button>
+</body>
+</html>
+<script>
+  let giavetreem = 15000;
+  let giavenguoilon = 45000;
+  let giavenguoicaotuoi = 35000
+  function banve(){
+    let sotuoi = document.getElementById('age').value
+     if(sotuoi<0){
+       alert('so tuoi khong hop le');
+     }else if (sotuoi<=12){
+       alert(giavetreem);
+     }else if (sotuoi<=60){
+       alert(giavenguoilon);
+     }else if (sotuoi>60){
+       alert(giavenguoicaotuoi);
+     }else {
+       alert(giavenguoicaotuoi);
+     }
+  }
+</script>
