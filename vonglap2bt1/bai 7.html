@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT7</title>
+</head>
+<body>
+<div id="output"></div>
+</body>
+</html>
+<script>
+    function fizzBuzz(){
+        let output = document.getElementById('output');
+            output.innerHTML=""
+        for (let i = 0; i < 100; i++){
+           if (i % 3 == 0 && i % 5 == 0){
+               output.innerHTML += 'FizzBuzz';
+           }else if (i % 3 == 0){
+                output.innerHTML +='Fizz';
+           }else if (i % 5 == 0){
+                 output.innerHTML +='Buzz';
+           }else {
+               output.innerHTML += 'i+';
+           }
+        }
+    }
+    window.onload = fizzBuzz()
+</script>

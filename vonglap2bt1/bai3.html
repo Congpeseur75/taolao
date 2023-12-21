@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function hienThiFibonacci() {
+        let a = 0, b = 1, c;
+        const count = 20;
+
+        document.write(a + "<br>");
+        document.write(b + "<br>");
+
+        for (let i = 2; i < count; i++) {
+            c = a + b;
+            document.write(c + "<br>");
+
+            a = b;
+            b = c;
+        }
+    }
+    hienThiFibonacci();
+</script>
+</script>

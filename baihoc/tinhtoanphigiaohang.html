@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Toán Phí Giao Hàng</title>
+</head>
+<body>
+<form>
+<label for="khoangCach">Khoảng Cách (km):</label>
+<input type="number" id="khoangCach"><br><br>
+
+<label for="trongLuong">Trọng Lượng (kg):</label>
+<input type="number" id="trongLuong"><br><br>
+
+<label for="tocDo">Tốc Độ Giao Hàng:</label>
+<select id="tocDo">
+    <option value="1">Tiêu chuẩn</option>
+    <option value="nhanh">Nhanh</option>
+    <option value="hỏa tốc">Hỏa tốc</option>
+</select><br><br>
+
+<button type="button" onclick="tinhPhi()">Tính Phí</button>
+</form>
+<div id="result"></div>
+</body>
+</html>
+<script>
+    function tinhPhi() {
+        let khoangCach = parseFloat(document.getElementById("khoangCach").value);
+        let trongLuong = parseFloat(document.getElementById("trongLuong").value);
+        let tocDo = document.getElementById("tocDo").value;
+        let tocDoValue = 1;
+
+        if (tocDo === "nhanh") {
+            tocDoValue = 1.5;
+        } else if (tocDo === "hỏa tốc") {
+            tocDoValue = 1.75;
+        }
+
+        var phiGiaoHang = khoangCach * 15000 * tocDoValue + (trongLuong * 1000);
+
+        document.getElementById("result").innerHTML = "Phí giao hàng là: " + phiGiaoHang + " VND";
+    }
+</script>

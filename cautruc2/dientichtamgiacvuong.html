@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dientichtamgiacvuong</title>
+</head>
+<body>
+<input id="canha" name="tamgiacvuong">
+<input id="canhb" name="tamgiacvuong">
+<button onclick="dientich()">submit</button>
+</body>
+</html>
+<script>
+  let dttamgiacvuong
+  function dientich(){
+    let canh = document.getElementById('canha').value
+    let canhb = document.getElementById('canhb').value
+    if (canh>0 && canhb>0){
+      dttamgiacvuong = 1/2 * (canh * canhb);
+      alert(dttamgiacvuong)
+    }else{
+        alert('khong thoa man dieu kien')
+    }
+  }
+</script>

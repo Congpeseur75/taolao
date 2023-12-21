@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>solonthu2trong4so</title>
+</head>
+<body>
+<input id="number1" placeholder="nhap so">
+<input id="number2" placeholder="nhap so">
+<input id="number3" placeholder="nhap so">
+<input id="number4" placeholder="nhap so">
+<button onclick="check()">kiemtra</button>
+</body>
+</html>
+<script>
+    function check(){
+        let so1 =parseInt(document.getElementById('number1').value)
+        let so2 =parseInt(document.getElementById('number2').value)
+        let so3 =parseInt(document.getElementById('number3').value)
+        let so4 =parseInt(document.getElementById('number4').value)
+            if (so1>so2 && so1>so3 && so1>so4){
+               if (so2>so3 & so2>so4){
+                   alert(so2);
+               }else if (so3>so2 && so3>so4){
+                     alert(so3);
+                    }else {
+                        alert(so4);
+                    }
+            }else if (so2>so1 && so2>so3 && so2>so4){
+                    if (so1>so3 && so1>so4){
+                        alert(so1);
+                    }else if (so3>so1 && so3>so4){
+                          alert(so3);
+                        }else {
+                            alert(so4);
+                        }
+                }else if (so3>so1 && so3>so2 && so3>so4){
+                    if (so1>so2 && so1>so4){
+                        alert(so1);
+                    }else if (so2>so1 && so2>so4){
+                            alert(so2);
+                        }else {
+                            alert(so4);
+                        }
+                    }else if (so4>so1 && so4>so3 && so4>so2){
+                            if (so1>so2 && so1>so3){
+                                alert(so1);
+                            }else if (so2>so1 && so2>so3){
+                                alert(so2)
+                                }else {
+                                    alert(so3)
+                            }
+                        }else {
+                            alert('khong co so nao')
+                        }
+    }
+</script>

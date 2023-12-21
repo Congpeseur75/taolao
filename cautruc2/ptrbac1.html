@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phương trình bậc 1</title>
+</head>
+<body>
+<h1>Giai phuong trinh bac 1</h1>
+<input id="number1" placeholder="nhap so"><br>
+<br>
+<input id="number2" placeholder="nhap so"><br>
+<br>
+<button onclick="giaiphuongtrinh()">check</button>
+</body>
+</html>
+<script>
+    function giaiphuongtrinh(){
+        let a =parseInt(document.getElementById('number1').value)
+        let b =parseInt(document.getElementById('number2').value)
+        let x
+            if (a == 0 && b == 0 ){
+                alert('phuong trinh vo so nghiem');
+            }else if (a == 0 && b < 0 && b > 0){
+                    alert('phuong trinh vo nghiem');
+                }else if (a < 0 && a > 0){
+                        x = -b * a;
+                        alert(x);
+                        }else {
+                            alert('phuong trinh co 1 nghiem')
+                            }
+    }
+</script>

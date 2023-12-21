@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh tong cua 20 so dau trong day fibonaci</title>
+</head>
+<body>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function fibonaccisum(){
+        let sum = 0
+        let a = 0
+        let b = 1
+    for (let i = 0;i < 20; i++){
+          sum += a;
+        let temp = a + b;
+            b = a;
+            a = temp;
+        }
+        return sum
+    }
+
+    document.getElementById('result').innerHTML ='tong 20 so fibonacci đầu tiên' + fibonaccisum();
+</script>
