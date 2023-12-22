@@ -5,18 +5,31 @@
     <title>hinhanh</title>
 </head>
 <body>
-<img id="anh" style="position: relative" top="20px" left="20px" width="300" height="400"   src="https://www.kkday.com/vi/blog/wp-content/uploads/chup-anh-dep-bang-dien-thoai-25.jpg">
-<button onclick="len">len</button>
-<button onclick="xuong()">xuong</button>
-<button onclick="trai">trai</button>
-<button onclick="phai">phai</button>
+<img src="https://inkythuatso.com/uploads/thumbnails/800/2022/03/2665651-15-15-34-30.jpg" id="anh" style="width: 100px">
+<br>
+<input type="button" value="dichuyen" onclick="moveRight()"/>
+<input type="button" value="len" onclick="moveTop()"/>
+<input type="button" value="xuong" onclick="moveUp()"/>
 </body>
 </html>
 <script>
-    let element = document.getElementById('anh')
-    function len(){
-
-        element.style.top = parseInt(element.style.top) + 50 + 'px'
-
+    let imgObj = null;
+    imgObj = document.getElementById('anh');
+    function dichuyen() {
+        imgObj = document.getElementById('anh')
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+        imgObj.style.top = '0px';
+        imgObj.style.bottom = '0px';
     }
+    function moveRight(){
+        imgObj.style.left = parseInt(imgObj.style.left) + 50 + 'px';
+    }
+    function moveTop(){
+        imgObj.style.top = parseInt(imgObj.style.top) + 50 + 'px';
+    }
+    function moveUp(){
+        imgObj.style.bottom = parseInt(imgObj.style.bottom) + 50 + 'px';
+    }
+    window.onload = dichuyen();
 </script>
