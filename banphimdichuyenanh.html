@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>su dung ban phim di chuyển ảnh</title>
+</head>
+<body>
+<img id="anh" src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2023/09/anh-luffy-gear-5.jpg" style="position: relative; left: 0; top: 0;" width="400" height="300">
+</body>
+</html>
+<script>
+    function dichuyensangtrai(){
+        let element = document.getElementById('anh');
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+    function dichuyensangphai(){
+        let element = document.getElementById('anh');
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+    function dichuyenlentren(){
+        let element = document.getElementById('anh');
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+    function dichuyenxuongduoi(){
+        let element = document.getElementById('anh');
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+     }
+     function moveSelection(evt){
+        switch (evt.keyCode){
+            case 37:
+                dichuyenlentren();
+                break;
+            case 39:
+                dichuyenxuongduoi();
+                break;
+            case 38:
+                dichuyensangtrai();
+                break;
+            case 40:
+                dichuyensangphai();
+                break
+        }
+     }
+     window.addEventListener('keydown',moveSelection);
+</script>
