@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Bảng cửu chương</title>
 </head>
 <body>
-$END$
+<h1>BẢNG CỬU CHƯƠNG</h1>
 </body>
 </html>
+<script>
+    let i = 0
+    let j = 0
+    let z
+    let sout;
+        sout ="<table border='1px' width='3px' cellspacing='0px' cellpadding='3px'>"
+    for (i = 2; i < 10; i++){
+        sout = sout + "<tr>"
+            for (j = 1; j < 10; j++){
+                z = i * j;
+                sout = sout + "<td>" + i + "x" + j + "=" + z + "</td>";
+            }sout = sout + "</tr>";
+    }sout = sout + "</table>";
+    document.write(sout);
+</script>
