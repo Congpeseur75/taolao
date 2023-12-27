@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let numbers = [5, 5, 1, 3, 2, 10,20,15,35,100];
+  let max = numbers[0];
+  let sum = 0
+  let sum1
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }sum = sum + numbers[i];
+    sum1 = sum / numbers.length;
+  }
+
+
+  alert("max: " + max + " gia tri trung binh " + sum1);
+</script>
+</body>
+</html>

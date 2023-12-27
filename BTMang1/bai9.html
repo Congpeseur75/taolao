@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Arrays</title>
+</head>
+<body>
+
+<script>
+    // Khởi tạo mảng a và b
+    let a = new Array(10);
+    let b = new Array(10);
+
+    // Nhập giá trị cho mảng a
+    for (let i = 0; i < 10; i++) {
+        a[i] = prompt("Nhập phần tử thứ " + (i + 1) + " của mảng a:");
+    }
+
+    // Nhập giá trị cho mảng b
+    for (let i = 0; i < 10; i++) {
+        b[i] = prompt("Nhập phần tử thứ " + (i + 1) + " của mảng b:");
+    }
+
+    // Nối mảng a và b để tạo mảng c
+    let c = a.concat(b);
+
+    // Hiển thị mảng c
+    document.write("<p>Mảng c sau khi nối: " + c + "</p>");
+</script>
+
+</body>
+</html>

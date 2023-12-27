@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm số nguyên âm</title>
+</head>
+<body>
+
+<h2>Nhập chuỗi:</h2>
+<input type="text" id="inputString">
+<button onclick="countNegativeIntegers()">Đếm</button>
+
+<p id="result"></p>
+
+<script>
+    function countNegativeIntegers() {
+        // Lấy giá trị từ ô input
+        let inputString = document.getElementById('inputString').value;
+
+        // Kiểm tra xem chuỗi có giá trị không
+        if (inputString.trim() === '') {
+            alert('Vui lòng nhập chuỗi!');
+            return;
+        }
+
+        // Sử dụng biểu thức chính quy để tìm các số nguyên âm trong chuỗi
+        let regex = /-?\d+/g;
+        let match = inputString.match(regex);
+
+        // Đếm số lượng số nguyên âm
+        let count = match ? match.length : 0;
+
+        // Hiển thị kết quả
+        document.getElementById('result').innerText = 'Số nguyên âm trong chuỗi: ' + count;
+    }
+</script>
+
+</body>
+</html>>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Element in Array</title>
+</head>
+<body>
+
+<script>
+    // Hàm kiểm tra và xoá phần tử từ mảng
+    function deleteElementFromArray() {
+        // Khởi tạo mảng gồm 10 phần tử
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // Nhập giá trị V từ người dùng
+        let v = parseInt(prompt("Nhập giá trị V:"));
+
+        // Kiểm tra xem V có thuộc mảng không
+        let index = arr.indexOf(v);
+        if (index !== -1) {
+            // Nếu V thuộc mảng, xoá V khỏi mảng
+            for (let i = index; i < arr.length - 1; i++) {
+                arr[i] = arr[i + 1];
+            }
+            arr[arr.length - 1] = 0;
+
+            // Hiển thị mảng sau khi xoá
+            alert("Mảng sau khi xoá: " + arr);
+        } else {
+            // Nếu V không thuộc mảng, thông báo không tìm thấy
+            alert("Không tìm thấy giá trị V trong mảng");
+        }
+    }
+
+    // Gọi hàm khi trang web được tải
+    deleteElementFromArray();
+</script>
+
+</body>
+</html>

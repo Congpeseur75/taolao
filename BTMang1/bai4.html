@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đảo Ngược Mảng</title>
+</head>
+<body>
+
+<h2>Đảo Ngược Mảng</h2>
+
+<label for="inputArray">Nhập mảng số nguyên (cách nhau bằng dấu phẩy): </label>
+<input type="text" id="inputArray" placeholder="Ví dụ: 1,2,3,4,5">
+<button onclick="reverseArray()">Đảo Ngược</button>
+
+<p id="result"></p>
+
+<script>
+    function reverseArray() {
+        // Lấy giá trị từ ô nhập
+        let inputArrayElement = document.getElementById("inputArray");
+        let inputArrayValue = inputArrayElement.value;
+
+        // Chuyển chuỗi thành mảng số nguyên
+        let array = inputArrayValue.split(',').map(function(item) {
+            return parseInt(item, 10);
+        });
+
+        // Đảo ngược mảng
+        let reversedArray = array.reverse();
+
+        // Hiển thị kết quả
+        let resultElement = document.getElementById("result");
+        resultElement.innerHTML = "Mảng đảo ngược: " + reversedArray.join(', ');
+    }
+</script>
+
+</body>
+</html>

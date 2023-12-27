@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp mảng</title>
+    <script>
+        function sapXepGiamDan() {
+            // Nhập vào mảng số nguyên
+            let mang = [];
+            for (let i = 1; i <= 10; i++) {
+                let phanTu = prompt("Nhập phần tử thứ " + i + ":");
+                mang.push(parseInt(phanTu));
+            }
+
+            // Sắp xếp mảng giảm dần
+            mang.sort(function(a, b) {
+                return b - a;
+            });
+
+            // Hiển thị mảng đã sắp xếp
+            let ketQua = "Mảng đã sắp xếp giảm dần: " + mang.join(", ");
+            document.getElementById("ketQua").innerHTML = ketQua;
+        }
+    </script>
+</head>
+<body>
+
+<h1>Sắp xếp mảng số nguyên</h1>
+
+<button onclick="sapXepGiamDan()">Sắp xếp và Hiển thị</button>
+
+<div id="ketQua"></div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timsoastrong</title>
+</head>
+<body>
+<input id="number1" placeholder="nhapso">
+<button onclick="astrong()">submit</button>
+</body>
+</html>
+<script>
+    function astrong(){
+        let a =  document.getElementById('number1').value;
+        let array = a.length
+        let sum = 0
+        for (i=0;i<a.length;i++){
+             sum += parseInt(a[i]**array)
+        }
+        if (sum == a){
+            alert('la so amstrong');
+        }else {
+            alert('kp so amstrong');
+        }
+    }
+</script>

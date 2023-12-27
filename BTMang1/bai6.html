@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check V in Array</title>
+</head>
+<body>
+
+<h2>Nhập vào mảng số nguyên (10 phần tử):</h2>
+<input type="text" id="inputArray">
+
+<h2>Nhập vào số nguyên V:</h2>
+<input type="text" id="inputV">
+
+<button onclick="checkVInArray()">Kiểm tra</button>
+
+<p id="result"></p>
+
+<script>
+  function checkVInArray() {
+    // Lấy giá trị từ ô input của mảng
+    let inputArray = document.getElementById('inputArray').value;
+
+    // Chuyển chuỗi nhập vào thành mảng số nguyên
+    let array = inputArray.split(',').map(function(item) {
+      return parseInt(item, 10);
+    });
+
+    // Lấy giá trị từ ô input của số V
+    let v = parseInt(document.getElementById('inputV').value, 10);
+
+    // Kiểm tra xem V có nằm trong mảng không
+    let isInArray = array.includes(v);
+
+    // Hiển thị kết quả
+    if (isInArray) {
+      document.getElementById('result').innerText = v + ' is in the array';
+    } else {
+      document.getElementById('result').innerText = v + ' is not in the array';
+    }
+  }
+</script>
+
+</body>
+</html>

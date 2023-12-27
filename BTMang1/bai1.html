@@ -1,0 +1,25 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Numbers</title>
+    <script>
+        function countNumbers() {
+            var integerArray = [5, 12, 8, 15, 3, 20, 7, 11, 9, 25];
+            var count = 0;
+            for (var i = 0; i < integerArray.length; i++) {
+                if (integerArray[i] >= 10) {
+                    count++;
+                }
+            }
+            alert('Số nguyên lớn hơn hoặc bằng 10: ' + count);
+        }
+    </script>
+</head>
+<body>
+
+<h1>Count Numbers</h1>
+
+<button onclick="countNumbers()">Đếm số nguyên</button>
+
+</body>
+</html>

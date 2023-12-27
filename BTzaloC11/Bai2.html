@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi số thành chữ</title>
+</head>
+<body>
+<label for="sothanhchu">nhập số</label>
+<input type="text" id="sothanhchu">
+<button onclick="doisothanhchu()">submit</button>
+<p id='result'></p>
+</body>
+</html>
+<script>
+    function doisothanhchu(){
+        let number = document.getElementById('sothanhchu').value;
+        let chuso = ['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín'];
+        let donvi = ['','mươi','trăm']
+        let digit
+        let result = "";
+            arraynum = number.toString().split('').map(Number);
+        for (i=0;i<arraynum.length;i++){
+            digit = arraynum[i];
+            if (digit!==0){
+                result += chuso[digit]+" "+donvi[arraynum.length - i - 1] +" ";
+            }
+        }
+        document.getElementById('result').innerHTML = result.trim()
+    }
+</script>
