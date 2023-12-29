@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+   function tinhgiathua(n){
+       if (n === 0 || n === 1){
+           return 1
+       }else{
+           return n * (tinhgiathua(n -1));
+       }
+   }
+   let nhapso = prompt();
+   let result = tinhgiathua(nhapso);
+   alert('tinh giai thua'+nhapso+'la'+ result);
+</script>

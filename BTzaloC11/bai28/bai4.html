@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr = [34,17,25,16,26];
+    let flag = true;
+    for (i=0;i<arr.length;i++){
+        if (arr[i]>arr[i-1]){
+            flag = false;
+            break;
+        }
+    }
+    if(flag == true){
+       alert("TANG DAN");
+    }else{
+        alert("KO TANG DAN");
+    }
+</script>

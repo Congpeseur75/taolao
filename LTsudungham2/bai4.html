@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function kiemtra(n){
+        // n string or number
+        // isNaN(a) => boolean
+        if (isNaN(n)){
+            alert('đúng nếu giá trị là số');
+        }else {
+            alert('sai');
+        }
+    }
+    let nhap = prompt();
+    console.log(kiemtra(nhap));
+</script>

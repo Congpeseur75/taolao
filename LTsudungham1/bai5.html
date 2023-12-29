@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let ngoisao = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let bautroi = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    function check(sao){
+            for (i=0;i<ngoisao.length;i++){
+                if (ngoisao[i] === sao){
+                    return bautroi[i]
+                }
+            }
+        return "không tìm thấy thông tin ngôi sao này";
+    }
+    let number = prompt("nhập tên các ngôi sao:")
+    let cacngoisao = check(number);
+    alert(cacngoisao);
+</script>
