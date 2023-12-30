@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function mangkytu(arr,kytu){
+        let count = 0
+        for (i=0;i<arr.length;i++){
+            if (arr[i]===kytu){
+                count += 1
+            }if (count>0){
+                return count
+            }else {
+                return 1
+            }
+        }
+    }
+    let mangkytuco = ["a","b","c","d","f"];
+    let kytucantra = ["b"];
+    let ketqua = mangkytu(mangkytuco,kytucantra);
+    alert(ketqua)
+    if (ketqua != 1){
+        alert('ký tự'+kytucantra+"không xuất hiện trong mảng");
+    }else {
+        alert('ký tự'+kytucantra+"xuất hiện"+ketqua+"lần trong mảng");
+    }
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function songuyen(a,b){
+        let temp = a
+            a = b
+            b = temp
+        return a,b;
+    }
+    let so1 = prompt();
+    let so2 = prompt();
+    let sum = songuyen(so1,so2);
+    alert(sum);
+</script>

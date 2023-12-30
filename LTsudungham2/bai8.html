@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function chuyendoiham(c) {
+        let first = 0;
+        let last = c.length - 1;
+        while (first < last) {
+            let b = c[first];
+            c[first] = c[last];
+            c[last] = b;
+            first++;
+            last--;
+        }
+        return c
+    }
+    let x = [-3, 5, 1, 3, 2, 10];
+    let chuyendoi = chuyendoiham(x);
+    alert(chuyendoi);
+</script>

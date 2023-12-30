@@ -10,8 +10,17 @@
 </html>
 <script>
     function anhDat(a,b,c){
-        return min(a,b,c)
+        if (a <= b && a <= c){
+            return a
+        }else if (b <= a && b <= c ){
+            return b
+        }else {
+            return c
+        }
     }
-    let sum = anhDat(a,b,c)
-    alert(sum);
+    let so1 = prompt();
+    let so2 = prompt();
+    let so3 = prompt();
+    let sum = anhDat(so1,so2,so3)
+    alert('so nhỏ nhất là:' + sum);
 </script>
