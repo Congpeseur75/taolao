@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function isPrime(number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function findPrimes() {
+        const primes = [];
+        for (let i = 2; i < 10000; i++) {
+            if (isPrime(i)) {
+                primes.push(i);
+            }
+        }
+        return primes;
+    }
+
+    const primeNumbers = findPrimes();
+    console.log(primeNumbers);
+</script>

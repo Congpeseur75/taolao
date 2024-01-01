@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+</head>
+<body>
+<h1>Quản lý sản phẩm</h1>
+
+<form id="addProductForm">
+    <input type="text" id="productName" placeholder="Nhập tên sản phẩm">
+    <button type="submit">Thêm</button>
+</form>
+
+<table id="productTable">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Tên sản phẩm</th>
+        <th>Xoá</th>
+    </tr>
+    </thead>
+    <tbody id="productList">
+    <!-- Danh sách sản phẩm sẽ được thêm vào đây -->
+    </tbody>
+</table>
+
+<form id="editProductForm">
+    <input type="text" id="editProductName" placeholder="Nhập tên sản phẩm cần sửa">
+    <button type="submit">Sửa</button>
+</form>
+
+</body>
+</html>
+<script>
+    // Bước 2: Tạo một mảng chứa danh sách sản phẩm
+    let products = [];
+
+    // Bước 3: Xây dựng các hàm quản lý sản phẩm
+    function displayProductList() {
+        const productList = document.getElementById('productList');
+        productList.innerHTML = '';
+
+        products.forEach((product, index) => {
+            const row = `<tr>
+                  <td>${index + 1}</td>
+                  <td>${product}</td>
+                  <td><button onclick="deleteProduct(${index})">Xoá</button></td>
+                </tr>`;
+            productList.innerHTML += row;
+        });
+    }
+
+    function addProduct(event) {
+        event.preventDefault();
+        const productNameInput = document.getElementById('productName');
+        const productName = productNameInput.value.trim();
+
+        if (productName !== '') {
+            products.push(productName);
+            productNameInput.value = '';
+            displayProductList();
+            alert(`Đã thêm sản phẩm: ${productName}`);
+        } else {
+            alert('Vui lòng nhập tên sản phẩm');
+        }
+    }
+
+    function editProduct(event) {
+        event.preventDefault();
+        const editProductNameInput = document.getElementById('editProductName');
+        const editedProductName = editProductNameInput.value.trim();
+
+        if (editedProductName !== '') {
+            const index = products.indexOf(editedProductName);
+            if (index !== -1) {
+                const newProductName = prompt('Nhập tên mới cho sản phẩm', editedProductName);
+                if (newProductName !== null && newProductName !== '') {
+                    products[index] = newProductName;
+                    displayProductList();
+                    alert(`Đã sửa tên sản phẩm thành: ${newProductName}`);
+                }
+            } else {
+                alert('Không tìm thấy sản phẩm cần sửa');
+            }
+        } else {
+            alert('Vui lòng nhập tên sản phẩm cần sửa');
+        }
+    }
+
+    function deleteProduct(index) {
+        const deletedProductName = products[index];
+        if (confirm(`Bạn có chắc chắn muốn xoá sản phẩm "${deletedProductName}" không?`)) {
+            products.splice(index, 1);
+            displayProductList();
+            alert(`Đã xoá sản phẩm: ${deletedProductName}`);
+        }
+    }
+
+    // Bước 4: Gọi hàm hiển thị danh sách sản phẩm
+    displayProductList();
+
+    // Bước 5: Gọi hàm thêm một sản phẩm vào danh sách
+    const addProductForm = document.getElementById('addProductForm');
+    addProductForm.addEventListener('submit', addProduct);
+
+    // Bước 6: Gọi hàm sửa một sản phẩm trong danh sách
+    const editProductForm = document.getElementById('editProductForm');
+    editProductForm.addEventListener('submit', editProduct);
+</script>

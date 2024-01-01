@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi Feet và Meters</title>
+    <script>
+        function feetToMeters(feet) {
+            return feet * 0.3048; // 1 feet = 0.3048 meters
+        }
+
+        function metersToFeet(meters) {
+            return meters / 0.3048; // 1 meter = 3.28084 feet
+        }
+
+        function convertFeetToMeters() {
+            const feetValue = parseFloat(document.getElementById('feetInput').value);
+            if (!isNaN(feetValue)) {
+                const metersValue = feetToMeters(feetValue);
+                document.getElementById('result').innerHTML = `${feetValue} feet bằng ${metersValue.toFixed(2)} meters.`;
+            } else {
+                document.getElementById('result').innerHTML = 'Vui lòng nhập một số hợp lệ.';
+            }
+        }
+
+        function convertMetersToFeet() {
+            const metersValue = parseFloat(document.getElementById('metersInput').value);
+            if (!isNaN(metersValue)) {
+                const feetValue = metersToFeet(metersValue);
+                document.getElementById('result').innerHTML = `${metersValue} meters bằng ${feetValue.toFixed(2)} feet.`;
+            } else {
+                document.getElementById('result').innerHTML = 'Vui lòng nhập một số hợp lệ.';
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Chuyển đổi Feet và Meters</h1>
+
+<label for="feetInput">Nhập giá trị feet:</label>
+<input type="number" id="feetInput" placeholder="Nhập giá trị feet">
+
+<button onclick="convertFeetToMeters()">Chuyển đổi sang Meters</button>
+
+<label for="metersInput">Nhập giá trị meters:</label>
+<input type="number" id="metersInput" placeholder="Nhập giá trị meters">
+
+<button onclick="convertMetersToFeet()">Chuyển đổi sang Feet</button>
+
+<div id="result"></div>
+</body>
+</html>
