@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function isPalindrome(s) {
+        // Chuyển đổi chuỗi thành chữ thường và loại bỏ các ký tự không phải chữ cái
+        s = s.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+        // Nếu độ dài chuỗi là 0 hoặc 1, nó luôn là chuỗi đối xứng
+        if (s.length <= 1) {
+            return true;
+        }
+
+        // Kiểm tra xem ký tự đầu và cuối có bằng nhau không
+        if (s[0] !== s[s.length - 1]) {
+            return false;
+        }
+
+        // Nếu ký tự đầu và cuối bằng nhau, kiểm tra chuỗi con bên trong
+        // (bỏ qua ký tự đầu và cuối) để xem nó có phải là palindrome không
+        return isPalindrome(s.substring(1, s.length - 1));
+    }
+
+    // Kiểm tra chuỗi có phải là chuỗi palindrome không
+    console.log(isPalindrome("Rotor")); // Output: true
+    console.log(isPalindrome("Redder")); // Output: true
+    console.log(isPalindrome("Motor")); // Output: false
+</script>
