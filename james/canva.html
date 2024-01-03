@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="mycanvas" width="200" height="100"></canvas>
+</body>
+</html>
+<script>
+    let c = document.getElementById('mycanvas');
+    let ctx = c.getContext("2d");
+    //ctx.moveTo(0,0);
+    //ctx.lineTo(200,100);
+    //ctx.stroke();
+    //ctx.beginPath();
+    //ctx.arc(95,50,40,0,2* Math.PI);
+    //ctx.stroke();
+    //ctx.font = "30px Arial";
+    //ctx.fillText("hello world",10,50);
+    var grd = ctx.createLinearGradient(0,0,200,0);
+    //var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
+</script>

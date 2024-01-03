@@ -38,8 +38,8 @@
 
     // Bước 3: Xây dựng các hàm quản lý sản phẩm
     function displayProductList() {
-        const productList = document.getElementById('productList');
-        productList.innerHTML = '';
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';
 
         products.forEach((product, index) => {
             const row = `<tr>
@@ -57,7 +57,9 @@
         const productName = productNameInput.value.trim();
 
         if (productName !== '') {
+            // lưu sản phẩm vừa nhập
             products.push(productName);
+            // reset form
             productNameInput.value = '';
             displayProductList();
             alert(`Đã thêm sản phẩm: ${productName}`);
