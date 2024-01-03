@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function isSubstring(str1, str2) {
+        if (str1.length > str2.length) {
+            return false;
+        }
+
+        for (let i = 0; i <= str2.length - str1.length; i++) {
+            let match = true;
+            for (let j = 0; j < str1.length; j++) {
+                if (str2[i + j] !== str1[j]) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    // Sử dụng hàm:
+    let string1 = "world";
+    let string2 = "hello world, how are you?";
+    let result = isSubstring(string1, string2);
+    console.log(result);
+</script>

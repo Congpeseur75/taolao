@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function tryRemoveFromArray(arr,index){
+        if (index >= 0 && index < arr.length){
+            let newArray = [];
+            for (let i = 0; i<arr.length;i++){
+                if (arr[i] !== index){
+                    newArray.push(arr[i])
+                }
+            }
+            return newArray
+        }else {
+            return arr
+        }
+    }
+    let originalArray = [1, 2, 3, 4, 5];
+    let indexToRemove = 2;
+    let modifiedArray = tryRemoveFromArray(originalArray, indexToRemove);
+    console.log(modifiedArray);
+</script>

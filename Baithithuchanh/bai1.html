@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  let diemthi = [10,20,30,40,50,60,70,80,90];
+  function thirdHighestScore(score){
+    let max = score[0]
+    let first = max
+    let second = first
+    for (let i=1; i<score.length; i++){
+      if (score[i]>max){
+        second = first;
+        first = max
+        max = score[i];
+      }else if (first < score[i] < max){
+        second = first;
+        first = score[i];
+      }else if (second < score[i] < first){
+        second = score[i]
+      }
+    }
+    return second;
+  }
+
+  //thirdHighestScore(diemthi);
+  let sum = thirdHighestScore(diemthi);
+ alert(sum)
+</script>
