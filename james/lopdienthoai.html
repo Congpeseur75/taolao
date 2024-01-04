@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class DienThoai {
+        constructor(ten, hangSanXuat, giaTien) {
+            this.ten = ten;
+            this.hangSanXuat = hangSanXuat;
+            this.giaTien = giaTien;
+            this.batTat = false;
+        }
+
+        // Phương thức bật điện thoại
+        bat() {
+            if (!this.batTat) {
+                this.batTat = true;
+                console.log(`${this.ten} đã được bật.`);
+            } else {
+                console.log(`${this.ten} đã được bật rồi.`);
+            }
+        }
+
+        // Phương thức tắt điện thoại
+        tat() {
+            if (this.batTat) {
+                this.batTat = false;
+                console.log(`${this.ten} đã được tắt.`);
+            } else {
+                console.log(`${this.ten} đã được tắt rồi.`);
+            }
+        }
+
+        // Phương thức mô tả điện thoại
+        moTa() {
+            console.log(`Điện thoại: ${this.ten}, Hãng sản xuất: ${this.hangSanXuat}, Giá tiền: ${this.giaTien} VNĐ, Trạng thái: ${this.batTat ? 'Đã bật' : 'Đã tắt'}`);
+        }
+    }
+
+    // Sử dụng lớp Điện thoại
+    let dienThoaiSamsung = new DienThoai('Samsung Galaxy S21', 'Samsung', 15000000);
+    dienThoaiSamsung.moTa(); // Hiển thị thông tin điện thoại
+    dienThoaiSamsung.bat(); // Bật điện thoại
+    dienThoaiSamsung.moTa(); // Hiển thị thông tin sau khi bật
+    dienThoaiSamsung.tat(); // Tắt điện thoại
+    dienThoaiSamsung.moTa();
+</script>

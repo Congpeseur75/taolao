@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+  <canvas id="myCanvas" width="500" height="500" style="border: 1px solid #d3d3d3;">
+    Your brower does support the HTMl canvas tag.
+  </canvas>
+</div>
+<script>
+  let c = document.getElementById('myCanvas');
+  let ctx = c.getContext("2d");
+  function draw(x,y){
+    if (x === 450 && y === 0){
+      speed = 0;
+      speedDown = 5;
+    }
+    if (x === 0 && y === 0){
+      speed = 5;
+      speedDown = 0;
+    }
+    if (x === 450 && y === 450){
+      speed = -5;
+      speedDown = 0
+    }
+    if (x === 0 && y === 450){
+      speed = 0;
+      speedDown = -5;
+    }
+    ctx.fillRect(x,y,50,50);
+  }
+  function clear(){
+    ctx.clearRect(0,0,500,500)
+  }
+  let x = 0;
+  let y = 0;
+  let speed = 5;
+  let speedDown = 5
+  function start(){
+    clear();
+    draw(x,y);
+    x += speed;
+    y += speedDown
+  }
+  setInterval(start,60);
+</script>
+</body>
+</html>

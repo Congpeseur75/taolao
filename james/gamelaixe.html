@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game lái xe</title>
+    <script src="phaser.min.js"></script>
+</head>
+<body>
+<script>
+    const config = {
+        type: Phaser.AUTO,
+        width: 800,
+        height: 600,
+        scene: {
+            preload: preload,
+            create: create,
+            update: update
+        }
+    };
+
+    const game = new Phaser.Game(config);
+
+    function preload() {
+        // Tải các tài nguyên cần thiết, như hình ảnh và âm thanh
+        this.load.image('car', 'path/to/car.png');
+        // Các tài nguyên khác có thể được tải ở đây
+    }
+
+    function create() {
+        // Tạo các đối tượng và thiết lập trạng thái ban đầu của trò chơi
+        this.car = this.add.sprite(400, 300, 'car');
+        // Thiết lập các thành phần khác của trò chơi
+
+    }
+
+    function update() {
+        // Cập nhật trạng thái của trò chơi trong mỗi khung hình
+        // Ví dụ: di chuyển, va chạm, xử lý logic game
+    }
+</script>
+</body>
+</html>

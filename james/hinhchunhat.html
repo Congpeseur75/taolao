@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class rectangle{
+        constructor(length,width) {
+            this.length = length;
+            this.width = width;
+        }
+        thearea (){
+            return this.length * this.width;
+        }
+        circumference(){
+            return (this.length + this.width) * 2
+        }
+        information(){
+            alert(`hinh chữ nhật có chiều dài là: ${this.length} và chiều rộng là: ${this.width}`)
+            alert(`hinh chữ nhật có diện tích là: ${this.thearea()}`)
+            alert(`chu vi hình chữ nhật là: ${this.circumference()} `)
+        }
+    }
+    let hcn = new rectangle(4,5);
+    alert(hcn.information());
+</script>

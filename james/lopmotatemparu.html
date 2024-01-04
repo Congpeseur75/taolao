@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+class temperature{
+    constructor(value,unit = 'clesius') {
+        this.value = value;
+        this.unit = unit;
+    }
+    getvalue(){
+        return this.value;
+    }
+    getunit(){
+        return this.unit;
+    }
+    setvalue(value){
+        this.value = value;
+    }
+    setunit(unit){
+        this.unit = unit;
+    }
+    converTo(targetUnit){
+        if (this.unit === 'Celsius') {
+            if (targetUnit === 'Fahrenheit') {
+                return (this.value * 9/5) + 32;
+            } else if (targetUnit === 'Kelvin') {
+                return this.value + 273.15;
+            }
+        } else if (this.unit === 'Fahrenheit') {
+            if (targetUnit === 'Celsius') {
+                return (this.value - 32) * 5/9;
+            } else if (targetUnit === 'Kelvin') {
+                return (this.value - 32) * 5/9 + 273.15;
+            }
+        } else if (this.unit === 'Kelvin') {
+            if (targetUnit === 'Celsius') {
+                return this.value - 273.15;
+            } else if (targetUnit === 'Fahrenheit') {
+                return (this.value - 273.15) * 9/5 + 32;
+            }
+        }
+
+        // Trường hợp không hỗ trợ chuyển đổi
+        return null;
+    }
+
+    // Mô tả chuỗi biểu diễn cho đối tượng Temperature
+    toString() {
+        return `${this.value} ${this.unit}`;
+    }
+}
+const temp = new Temperature(25, 'Celsius');
+console.log(temp.getValue());
+console.log(temp.getUnit()); s
+
+temp.setValue(32);
+temp.setUnit('Fahrenheit');
+
+console.log(temp.getValue());
+console.log(temp.getUnit());
+
+console.log(temp.convertTo('Celsius'));
+console.log(temp.convertTo('Kelvin'));
+
+console.log(temp.toString());
+</script>
