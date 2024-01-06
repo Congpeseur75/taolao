@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td{
+            padding: 20px 60px;
+        }
+        table{
+            border: 1px solid black;
+        }
+        tr:nth-child(odd){
+            background: beige;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+<h1>Quản lí tài khoản</h1>
+<input id="search" oninput="findByUsername()" placeholder="Nhập Username" style="width: 300px; height: 50px">
+<br>
+<br>
+<table>
+    <tr style="background: cornflowerblue">
+        <td>ID</td>
+        <td>Username</td>
+        <td>Password</td>
+        <td>Role</td>
+        <td>Avatar</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+<tbody id="display">
+
+</tbody>
+</table>
+</div>
+</body>
+</html>
+<script src="quanlitaikhoan.js"></script>
+
+

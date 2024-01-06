@@ -9,10 +9,16 @@
 </body>
 </html>
 <script>
-    let str = ["hello","codegym","second","champions","logic"]
+    let str1 = ["hello","codegym","second","champions","logic"]
     function findLongGestString(str){
-        for (let i=0;i<arr.length;i++){
-            if ()
+        let arr = str[0]
+        for (let i=1;i<str.length;i++){
+            if (str[i]<arr){
+                arr = str[i]
+            }
         }
+        return arr;
     }
+    let longGetString = findLongGestString(str1);
+    alert(longGetString)
 </script>
