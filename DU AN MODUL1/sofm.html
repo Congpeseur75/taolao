@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofm</title>
+    <link rel="stylesheet" href="../sofm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+<div class="nav-bar">
+    <div id="Logo">SOFM</div>
+    <div id="login">
+        <button onclick="login()">Login</button>
+        <button onclick="displayCart()" class="fa-solid fa-cart-shopping"></button>
+    </div>
+</div>
+<div class="div-body">
+    <div class="container">
+        <div class="form-create">
+            <div class="create-product">
+                <div class="product-img">
+                    <a> <img src="https://phadincoffee.com/wp-content/uploads/2016/05/tim-hieu-mui-thom-cua-ly-ca-phe-nguyen-chat.jpg" width="250"></a>
+                </div>
+                <div class="product-create">
+                    <div class="infromation-group">
+                        <label for="ip-name" class="lb-information">Drinks </label>
+                        <input type="text" id="ip-name" class="ip-information">
+                    </div>
+                    <div class="infromation-group">
+                        <label for="ip-size" class="lb-information">Size</label>
+                        <input type="text" id="ip-size" class="ip-information">
+                    </div>
+                    <div class="infromation-group">
+                        <label for="ip-quantity" class="lb-information">Quantity </label>
+                        <input  type="text" id="ip-quantity" class="ip-information">
+                    </div>
+                    <div class="infromation-group">
+                        <label for="ip-adress" class="lb-information">Address</label>
+                        <input type="text" id="ip-adress" class="ip-information">
+                    </div>
+                </div>
+                <div class="action">
+                    <button onclick="oderProduct()" class="bt-add" type="button">Oder</button>
+                </div>
+            </div>
+        </div>
+        <div class="infor">
+            <div class="infor-left">
+                Thông tin sản phẩm
+                <input id="search" oninput="searchProduct()" placeholder="nhập tên cần tìm">
+            </div>
+            <div class="infor-rigth">
+                <button onclick="addProductnew()" id="bt-add" class="bt-add" type="button" disabled>Add</button>
+            </div>
+        </div>
+        <table>
+            <tr style="background: cornflowerblue">
+                <td>STT</td>
+                <td>Drink name</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Image</td>
+                <td>Edit</td>
+                <td>Delete</td>
+            </tr>
+            <tbody id="display">
+
+            </tbody>
+        </table>
+        <div class="pagination-container">
+            <div class="pagination">
+                <ul id="cf-pagination">
+                    <li>Previous</li>
+                    <li ><a onclick="goToPage(1)">1</a></li>
+                    <li><a onclick="goToPage(2)">2</a></li>
+                    <li><a onclick="goToPage(3)">3</a></li>
+                    <li>Next</li>
+                </ul>
+            </div>
+        </div>
+        <table id="cart-table" style="display: none">
+            <tr style="background: cornflowerblue">
+                <td>STT</td>
+                <td>Drink</td>
+                <td>Size</td>
+                <td>Quantity</td>
+            </tr>
+            <tbody id="cart">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/svg-with-js.min.css"/>
+<script src="../sofm.js"></script>
+</html>
