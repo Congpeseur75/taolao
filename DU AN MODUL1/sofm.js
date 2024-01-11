@@ -59,11 +59,11 @@ function display(arr){
                 <img src="${arr[i].image}" width="120" height="140">
            </td>
            <td>
-                <button id="edit${i}" onclick="editAccount(${i})" disabled>Edit</button>
+                <button class="btn-edit-delete" id="edit${i}" onclick="editAccount(${i})" disabled>Edit</button>
            </td>
            <td>
-                <button id="delete${i}" onclick="deleteAccount(${i})" disabled>Delete</button>
-           </td>           
+                <button class="btn-edit-delete" id="delete${i}" onclick="deleteAccount(${i})" disabled>Delete</button>
+           </td>         
        </tr>`
     }
     document.getElementById('display').innerHTML = str;
@@ -205,25 +205,21 @@ function disableAction(){
         }
     }
 }
-function checkCart(){
 
-}
 function addToCart(order) {
     carts.push(order);
 }
 function displayCart(){
-    document.getElementById('cart-table').style.display = "";
     let str = "";
-    let cartList = carts;
-
-    console.log(cartList);
-    for (let i = 0; i < cartList.length; i++){
+    for (let i = 0; i < carts.length; i++){
         str += `<tr>
-           <td>${i++}</td>
-           <td>${cartList[i].name}</td>
-           <td>${cartList[i].size}</td>
-           <td>${cartList[i].quantity}</td>
+           <td>${i + 1}</td>
+           <td>${carts[i].name}</td>
+           <td>${carts[i].size}</td>
+           <td>${carts[i].quantity}</td>
        </tr>`
+        console.log(carts[i].name);
     }
     document.getElementById('cart').innerHTML = str;
+    document.getElementById('cart-table').style.display = "";
 }
