@@ -9,7 +9,7 @@
 </body>
 </html>
 <script>
-    class Cricle{
+    class Circle{
         x;
         y;
         radius;
@@ -29,11 +29,11 @@
         let radius=circle.radius
         ctx.clearRect(0,0,canvas.width,canvas.height)
         ctx.beginPath();
-        ctx.arc(renderX,renderY,radius,0,2*Math.PI,false);
+        ctx.arc(renderX,renderY,radius,0,2*Math.PI,true);
         ctx.fillStyle= circle.color
         ctx.strokeStyle='black'
         ctx.stroke()
     }
-    let oldCircle = new Circle(50,50,80,'#0000')
+    let oldCircle = new Circle(100,100,100,'#0000')
     render(oldCircle);
 </script>
