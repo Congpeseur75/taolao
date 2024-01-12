@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="display"></canvas>
+</body>
+</html>
+<script>
+    class Cricle{
+        x;
+        y;
+        radius;
+        color;
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+        }
+    }
+    function render(circle){
+        let canvas = document.getElementById("display")
+        let ctx = canvas.getContext("2d")
+        let renderX = circle.x
+        let renderY= circle.y
+        let radius=circle.radius
+        ctx.clearRect(0,0,canvas.width,canvas.height)
+        ctx.beginPath();
+        ctx.arc(renderX,renderY,radius,0,2*Math.PI,false);
+        ctx.fillStyle= circle.color
+        ctx.strokeStyle='black'
+        ctx.stroke()
+    }
+    let oldCircle = new Circle(50,50,80,'#0000')
+    render(oldCircle);
+</script>

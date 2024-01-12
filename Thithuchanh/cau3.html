@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function sumOfListPrime(x) {
+        let sum = 0;
+        let primeNumber = [];
+        for (let i = 2; i <= x; i++) {
+            let primeNumber= true;
+            if (i === 2) {
+                primeNumber = true;
+            } else {
+                for (let j = 2; j < i; j++) {
+                    if (i % j === 0) {
+                        primeNumber = false;
+                        break;
+                    }
+                }
+            }
+            if (primeNumber === true) {
+                primeNumber.push(i);
+            }
+        }
+        for (let i = 0; i < primeNumber.length; i++) {
+            sum += primeNumber[i]
+        }
+        return sum;
+    }
+    alert(sumOfListPrime(50));
+</script>
